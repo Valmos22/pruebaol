@@ -1,0 +1,66 @@
+* {
+    background: white;
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+}
+
+.container-form {
+    width: 28%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.form-group {
+    width: 100%;
+    margin: 30px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.login-button {
+    background: #15128A !important; 
+    width: 100%;
+    font-size: 14px !important;
+    height: 50px;
+    border-radius: 16px !important;
+    color: white;
+}
+
+.login-button:focus{
+    outline: none;
+}
+
+input:focus{
+    outline: none;
+}
+
+#contrasena, #nombre{
+    height: 2.5rem;
+    padding: 0px 0px 0px 20px;
+    width: 95% !important;
+    border-color: #00000038;
+    color: black;
+}
+.form-group h1 {font-size: 1.2em !important;}
+img {width: 70px;}
+
+.checkbox {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+.checkbox input {
+    width: auto !important; 
+    margin-right: 8px;
+}
+
+#conectado {color: #00000070;}
+a{outline: none; color: black !important; font-size: 13px;}
+#conectado a {color: #00000070 !important;}
