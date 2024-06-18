@@ -101,7 +101,7 @@ const Login = () => {
           />
           <a href="http://" target="_blank" rel="noopener noreferrer">Permanecer conectado</a>
         </label>
-        <a href="http://" target="_blank" rel="noopener noreferrer">Recupera contrasena</a>
+        <a href="http://" target="_blank" rel="noopener noreferrer">Recupera contraseña</a>
       </div>
     </form>
   );
