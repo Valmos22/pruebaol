@@ -1,25 +1,30 @@
-import { Route, Routes } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Route, Routes, useLocation, Navigate } from "react-router-dom";
 import { Home } from "../pages/Home";
-import Login from "../auth/Login";
-import Proyectos from "../pages/Proyectos";
-import Roles from "../pages/Roles";
-import Usuarios from "../pages/Usuarios";
 import { Header } from "../components/Header";
-// import Footer from "../components/Footer";
+import Login from "../auth/Login";
 
 export const AppRouter = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      setIsAuthenticated(true);
+    }
+  }, []);
+
   return (
     <>
-      <Header />
+      {location.pathname === '/home' && <Header />}
       <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/proyectos" element={<Proyectos />} />
-        <Route path="/roles" element={<Roles />} />
-        <Route path="/usuario" element={<Usuarios />} />
-        <Route path="*" element={<Home />} />
+        <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
+        <Route
+          path="/home"
+          element={isAuthenticated ? <Home /> : <Navigate to="/login" />} />
+        <Route path="*" element={<Login />} />
       </Routes>
-      {/* <Footer /> */}
     </>
   );
 };

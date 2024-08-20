@@ -20,107 +20,85 @@
 .welcome h1 {font-size: large;}
 .welcome p {font-size: x-small;}
 
-.graficas {
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.tabla th, .tabla td {
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabla tr:hover {
+  background-color: #60d3db;
+}
+
+.lst {
   width: 100%;
   height: 100%;
   display: flex;
+  justify-content: center;
   align-items: flex-start;
-  flex-wrap: wrap;
-  margin-top: 1rem;
 }
 
-.container-clima {
-  width: 50%;
+.line {
+  text-align: left;
+  border-right: 1px solid #ddd;
 }
 
-.container-clima img {
-  width: 100%;
-  border-radius: 18px;
-}
-
-.clima {
-  width: 122px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  position: absolute;
-  left: 720px;
-  top: 55px;
-  background: none;
-}
-
-.clima .icon-clima {
-  width: 20%;
-  background: none;
-}
-
-.temperatura-clima {
-  background: none;
-  font-size: 28px;
-  margin-right: 5px;
-}
-
-.city-clima {
-  background: none;
-  display: flex;
-  flex-direction: column;
-}
-
-.city-clima span {
-  margin: 0px;
-  padding: 0px;
-}
-
-.clima span {
-  background: none;
-}
-
-#grados {
-  font-size: small;
-  position: relative;
-  float: right;
-  top: 6px;
-}
-
-.proyects-user {
-  width: 50%;
-  display: flex;
-  height: 100%;
-  flex-wrap: wrap;
-}
-
-.proyects {
-  padding-left: 18px;
-  margin: 5px;
+.lst > div {
+  margin: 1rem;
   width: 45%;
-  height: 10rem;
-  border-radius: 20px;
+}
+
+table {
+  width: 100%;
+}
+
+td button {
+  margin: 2px;
+  padding: 3px;
+  font-size: 12px;
+}
+
+.info {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.info ul {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: flex-start;
-  justify-content: space-evenly;
 }
 
-.proyects p{
-  background: none;
-  color: white;
-}
-
-.graficas .grafica-servidor{
-  width: 50% !important;
-  margin-top: 25px !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: flex-start !important;
-}
-
-.grafica-comits {
-  width: 50%;
-  margin-top: 25px;
-}
-
-.grafica-comits .comits {
+.creat-request {
+  width: 100%;
+  height: 200px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: flex-start;
+}
+
+.creat-request form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.form-div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 10px;
 }

@@ -28,7 +28,7 @@ nav {
     margin-left: 8rem;
 }
 .nav .icon-menu img {
-    width: 46px;
+    width: 40px;
 }
 .nav .avatar {
     display: flex;
@@ -48,3 +48,4 @@ nav {
 .icon-notifi img {width: 17px;}
 .icon-avatar img {width: 92%;}
 .icon-m img {width: 22px;}
+.cerrar-sesion {width: 6rem !important;}

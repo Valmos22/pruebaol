@@ -1,13 +1,21 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../components/Header.css";
 import Sidebar from "./Sidebar";
 
 export const Header = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
+  const navigate = useNavigate();
+
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
+
+  const logout =()=> {
+    localStorage.removeItem("token");
+    navigate('/login');
+  }
 
   const mainContentStyle = {
     marginLeft: sidebarOpen ? "8rem" : "2rem",
@@ -20,7 +28,7 @@ export const Header = () => {
         <section className="icon-menu">
           <div className="menu-icon">
             <img
-              src="/src/assets/Logo-OL-Software-2-02-150x150.png"
+              src="/src/assets/fotor-ai-20240430234324.jpg"
               alt="Logo"
             />
           </div>
@@ -40,6 +48,7 @@ export const Header = () => {
           <button className="icon-m">
             <img src="/src/assets/tres-puntos.png" alt="tresPuntos" />
           </button>
+          <button className="cerrar-sesion" type="button" onClick={logout} >Cerrar sesion</button>
         </section>
       </nav>
 
